@@ -1,0 +1,116 @@
+2018-07-13 19:34:20,843 ERROR: Exception on /About_me [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: About_me() missing 1 required positional argument: 'token'
+2018-07-13 19:34:21,672 ERROR: Exception on /About_me [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: About_me() missing 1 required positional argument: 'token'
+2018-07-13 19:34:26,982 ERROR: Exception on /About_me [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: About_me() missing 1 required positional argument: 'token'
+2018-07-13 19:34:34,422 ERROR: Exception on /About_me [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: About_me() missing 1 required positional argument: 'token'
+2018-07-13 19:34:37,070 ERROR: Exception on /About_me [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: About_me() missing 1 required positional argument: 'token'
+2018-07-13 19:34:46,820 ERROR: Exception on /About_me [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: About_me() missing 1 required positional argument: 'token'
+2018-07-13 19:36:27,837 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
+2018-07-13 19:36:30,055 ERROR: Exception on /About_me [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: About_me() missing 1 required positional argument: 'token'
+2018-07-13 19:38:51,451 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
+2018-07-13 19:40:25,122 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
+2018-07-13 19:41:32,194 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
+2018-07-13 19:43:45,712 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
+2018-07-13 19:45:08,422 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
+2018-07-13 20:21:13,734 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
+2018-07-13 20:21:56,345 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
+2018-07-17 09:31:21,686 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
+2018-07-21 01:22:06,975 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
+2018-07-25 14:34:59,478 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
