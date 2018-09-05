@@ -1,127 +1,138 @@
-2018-07-11 16:45:48,863 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:55]
-2018-07-11 16:47:26,693 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:55]
-2018-07-11 16:47:42,282 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:55]
-2018-07-12 12:48:43,819 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:55]
-2018-07-12 12:49:58,166 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:55]
-2018-07-12 12:50:29,350 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:55]
-2018-07-12 12:53:31,375 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6NSwiZXhwIjoxNTMxMzU3MzU0LjgwNjA5NjN9.tZ-EIRHx3OCMqEpMdn8x-0j7FkRCKhcc_TGI7I95KnY [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+2018-09-02 20:38:58,689 ERROR: Exception on /user/lanl [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\manoj\microblog\app\routes.py", line 83, in user
+    user = User.query.filter_by(username=username).first_or_404()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 427, in first_or_404
+    abort(404)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\werkzeug\exceptions.py", line 707, in abort
+    return _aborter(status, *args, **kwargs)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\werkzeug\exceptions.py", line 687, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
   File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "C:\Users\manoj\microblog\app\errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2018-09-02 20:38:59,070 ERROR: Exception on /user/lanl [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
   File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
   File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\manoj\microblog\app\routes.py", line 177, in reset_password
-    form = ResetPasswordForm()
-NameError: name 'ResetPasswordForm' is not defined
-2018-07-12 12:53:53,534 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6NSwiZXhwIjoxNTMxMzU3MzU0LjgwNjA5NjN9.tZ-EIRHx3OCMqEpMdn8x-0j7FkRCKhcc_TGI7I95KnY [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\manoj\microblog\app\routes.py", line 83, in user
+    user = User.query.filter_by(username=username).first_or_404()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 427, in first_or_404
+    abort(404)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\werkzeug\exceptions.py", line 707, in abort
+    return _aborter(status, *args, **kwargs)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\werkzeug\exceptions.py", line 687, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
   File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "C:\Users\manoj\microblog\app\errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2018-09-02 20:39:57,953 ERROR: Exception on /user/as [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
   File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
   File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\manoj\microblog\app\routes.py", line 177, in reset_password
-    form = ResetPasswordForm()
-NameError: name 'ResetPasswordForm' is not defined
-2018-07-12 12:54:02,313 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6NSwiZXhwIjoxNTMxMzU3MzU0LjgwNjA5NjN9.tZ-EIRHx3OCMqEpMdn8x-0j7FkRCKhcc_TGI7I95KnY [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\manoj\microblog\app\routes.py", line 83, in user
+    user = User.query.filter_by(username=username).first_or_404()
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 427, in first_or_404
+    abort(404)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\werkzeug\exceptions.py", line 707, in abort
+    return _aborter(status, *args, **kwargs)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\werkzeug\exceptions.py", line 687, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
   File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\manoj\microblog\app\routes.py", line 177, in reset_password
-    form = ResetPasswordForm()
-NameError: name 'ResetPasswordForm' is not defined
-2018-07-12 12:56:21,064 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:55]
-2018-07-12 12:58:01,686 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:55]
-2018-07-12 13:36:37,463 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
-2018-07-12 13:56:54,799 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
-2018-07-12 14:24:18,820 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
-2018-07-13 19:23:36,699 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
-2018-07-13 19:26:14,411 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
-2018-07-13 19:27:42,832 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
-2018-07-13 19:28:09,401 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
-2018-07-13 19:33:27,300 INFO: Microblog startup [in C:\Users\manoj\microblog\app\__init__.py:57]
-2018-07-13 19:33:50,340 ERROR: Exception on /About_me [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-TypeError: About_me() missing 1 required positional argument: 'token'
-2018-07-13 19:34:14,955 ERROR: Exception on /About_me [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-TypeError: About_me() missing 1 required positional argument: 'token'
-2018-07-13 19:34:18,184 ERROR: Exception on /About_me [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-TypeError: About_me() missing 1 required positional argument: 'token'
-2018-07-13 19:34:19,372 ERROR: Exception on /About_me [GET] [in c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-TypeError: About_me() missing 1 required positional argument: 'token'
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "C:\Users\manoj\microblog\app\errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\manoj\microblog\venv\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
